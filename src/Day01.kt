@@ -1,18 +1,18 @@
 import org.assertj.core.api.Assertions.assertThat
 
-/** bag -> grouped data. Example see testInput */
-const val BAG_DELIMITER = "\n\n" // \n\n -> 'empty line'
 
 fun main() {
+    /** bag -> grouped data. Example see testInput */
+    val bagDelimiter = "\n\n" // \n\n -> 'empty line'
 
     fun part1(input: String) =
         input
-            .bagIntsFromString(BAG_DELIMITER)
+            .bagIntsFromString(bagDelimiter)
             .sumTopBagElements(1)
 
     fun part2(input: String) =
         input
-            .bagIntsFromString(BAG_DELIMITER)
+            .bagIntsFromString(bagDelimiter)
             .sumTopBagElements(3)
 
 // test if implementation meets criteria from the description, like:
