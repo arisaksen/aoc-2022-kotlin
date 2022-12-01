@@ -8,9 +8,25 @@ import java.security.MessageDigest
 fun readInput(name: String) = File("src", "$name.txt")
     .readLines()
 
+fun readText(name: String) = File("src", "$name.txt")
+    .readText()
+
 /**
  * Converts string to md5 hash.
  */
 fun String.md5() = BigInteger(1, MessageDigest.getInstance("MD5").digest(toByteArray()))
     .toString(16)
     .padStart(32, '0')
+
+fun String.bagIntsFromString(delimiter: String): List<List<Int>> =
+    this
+        .split(delimiter)
+        .map { it.lines() }
+        .map { it.map { numberInGroup -> numberInGroup.toInt() } }
+
+fun List<List<Int>>.sumTopBagElements(n: Int) =
+    this
+        .map { it.sum() }
+        .sortedDescending()
+        .take(n)
+        .sum()
