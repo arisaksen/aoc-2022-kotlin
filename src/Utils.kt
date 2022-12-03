@@ -30,3 +30,17 @@ fun List<List<Int>>.sumTopBagElements(n: Int) =
         .sortedDescending()
         .take(n)
         .sum()
+
+fun String.filterCommonCharsInStrings(second: String): List<Char> {
+    val list = mutableSetOf<Char>()
+    this.forEach {
+        if (second.contains(it))
+            list.add(it)
+    }
+    return list.toList()
+}
+
+fun List<String>.filterCommonCharsInList(): List<Char> =
+    this.fold(this.first()) { acc, s ->
+        acc.filterCommonCharsInStrings(s).toString()
+    }.replace("[", "").replace("]", "").toList()
