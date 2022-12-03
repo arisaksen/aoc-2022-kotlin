@@ -28,6 +28,7 @@ fun main() {
 
         val rucksacksGrouped = rucksacks
             .chunked(3)
+            /** .also{ log.debug("") }    nice for logging  */
             .map { rucksack -> rucksack.map { it.first + it.second } }
             .map { it.filterCommonCharsInListItems() }
 
@@ -42,6 +43,8 @@ fun main() {
     val testInput = readInput("Day03_test")
     assertThat(part1(testInput)).isEqualTo(157)
     assertThat(part2(testInput)).isEqualTo(70)
+    /** "abccddef".toSet() intersect "cadeff".toSet())
+     * output: [a, c, d, e, f]                                    */
 
     val input = readInput("Day03")
     println(part1(input))

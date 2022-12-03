@@ -7,8 +7,8 @@ fun main() {
 
     fun part1(input: String) =
         input
-            .bagIntsFromString(bagDelimiter)
-            .sumTopBagElements(1)
+            .bagIntsFromString(bagDelimiter)      // util functions moved to Utils.kt for reuse
+            .sumTopBagElements(1)              // Utils.kt
 
     fun part2(input: String) =
         input

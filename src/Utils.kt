@@ -31,6 +31,8 @@ fun List<List<Int>>.sumTopBagElements(n: Int) =
         .take(n)
         .sum()
 
+/** "abccddef".toSet() intersect "cadeff".toSet())
+ * output: [a, c, d, e, f]                                    */
 fun String.filterCharsInCommonWith(second: String): List<Char> =
     this.fold("") { accChars, char -> if (char in second) accChars.plus(char) else accChars }
         .toSet()
