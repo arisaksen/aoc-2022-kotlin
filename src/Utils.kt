@@ -31,16 +31,12 @@ fun List<List<Int>>.sumTopBagElements(n: Int) =
         .take(n)
         .sum()
 
-fun String.filterCommonCharsInStrings(second: String): List<Char> {
-    val list = mutableSetOf<Char>()
-    this.forEach {
-        if (second.contains(it))
-            list.add(it)
-    }
-    return list.toList()
-}
+fun String.filterCharsInCommonWith(second: String): List<Char> =
+    this.fold("") { accChars, char -> if (char in second) accChars.plus(char) else accChars }
+        .toSet()
+        .toList()
 
-fun List<String>.filterCommonCharsInList(): List<Char> =
-    this.fold(this.first()) { acc, s ->
-        acc.filterCommonCharsInStrings(s).toString()
+fun List<String>.filterCommonCharsInListItems(): List<Char> =
+    this.fold(this.first()) { accChars, stringFromList ->
+        accChars.filterCharsInCommonWith(stringFromList).toString()
     }.replace("[", "").replace("]", "").toList()

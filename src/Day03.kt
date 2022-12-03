@@ -7,10 +7,6 @@ val itemPriority: Map<Char, Int> = items.zip(priority).toMap()
 typealias Compartment1 = String
 typealias Compartment2 = String
 typealias Rucksack = Pair<Compartment1, Compartment2>
-typealias Rucksacks = List<Rucksack>
-
-// part2
-
 
 fun main() {
 
@@ -18,11 +14,10 @@ fun main() {
         val rucksacks: List<Rucksack> =
             items.putItemsToRucksackCompartments()
 
-        val commonItemsForBothCompartments = rucksacks.map { it.first.filterCommonCharsInStrings(it.second) }
+        val commonItemsForBothCompartments = rucksacks.map { it.first.filterCharsInCommonWith(it.second) }
         val commonItemsSummed = commonItemsForBothCompartments
             .flatten()
-            .map { itemPriority[it] as Int }
-            .sumOf { it }
+            .sumOf { itemPriority[it] as Int }
 
         return commonItemsSummed
     }
@@ -34,12 +29,11 @@ fun main() {
         val rucksacksGrouped = rucksacks
             .chunked(3)
             .map { rucksack -> rucksack.map { it.first + it.second } }
-            .map { it.filterCommonCharsInList() }
+            .map { it.filterCommonCharsInListItems() }
 
         val commonItemsSummed = rucksacksGrouped
             .flatten()
-            .map { itemPriority[it] as Int }
-            .sumOf { it }
+            .sumOf { itemPriority[it] as Int }
 
         return commonItemsSummed
     }
