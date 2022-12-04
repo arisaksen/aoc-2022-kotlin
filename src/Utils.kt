@@ -43,7 +43,7 @@ fun List<String>.filterCommonCharsInListItems(): List<Char> =
         accChars.filterCharsInCommonWith(stringFromList).toString()
     }.replace("[", "").replace("]", "").toList()
 
-fun IntRange.intRangeContains(secondIntRange: IntRange): Boolean =
+infix fun IntRange.intRangeContains(secondIntRange: IntRange): Boolean =
     when ((this intersect secondIntRange).size) {
         secondIntRange.count() -> true
         this.count() -> true
