@@ -42,3 +42,10 @@ fun List<String>.filterCommonCharsInListItems(): List<Char> =
     this.fold(this.first()) { accChars, stringFromList ->
         accChars.filterCharsInCommonWith(stringFromList).toString()
     }.replace("[", "").replace("]", "").toList()
+
+fun IntRange.intRangeContains(secondIntRange: IntRange): Boolean =
+    when ((this intersect secondIntRange).size) {
+        secondIntRange.count() -> true
+        this.count() -> true
+        else -> false
+    }
