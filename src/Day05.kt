@@ -1,5 +1,6 @@
 import org.assertj.core.api.Assertions.assertThat
 
+// https://adventofcode.com/2022/day/5
 fun main() {
 
     fun part1(input: String): String {

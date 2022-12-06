@@ -1,6 +1,7 @@
 import org.assertj.core.api.Assertions.assertThat
 import java.util.LinkedList
 
+// https://adventofcode.com/2022/day/6
 fun main() {
     val moreThanTwoEqual = """^.*(.).*\1.*${'$'}""".toRegex()
 
