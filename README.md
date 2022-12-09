@@ -8,7 +8,7 @@
 [![Day 6](https://img.shields.io/badge/Day--6-solved-green)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day06.kt)
 [![Day 7](https://img.shields.io/badge/Day--7-solved-green)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day07.kt)
 [![Day 8](https://img.shields.io/badge/Day--8-solved-green)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day08.kt)
-[![Day 9](https://img.shields.io/badge/Day--9-todo-yellow)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day09.kt)
+[![Day 9](https://img.shields.io/badge/Day--9-halfsolved-silver)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day09.kt)
 [![Day 10](https://img.shields.io/badge/Day--10-todo-yellow)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day10.kt)
 [![Day 11](https://img.shields.io/badge/Day--11-todo-yellow)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day11.kt)
 [![Day 12](https://img.shields.io/badge/Day--12-todo-yellow)](https://github.com/arisaksen/aoc-2022-kotlin/blob/main/src/Day12.kt)
